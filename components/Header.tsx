@@ -1,8 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { FiShoppingCart, FiUser } from 'react-icons/fi'
-import { useCart } from '@/context/CartContext'
-
+import { useCart } from '../context/CartContext'
 export default function Header() {
   const { items } = useCart()
   const itemCount = items.reduce((acc, item) => acc + item.quantity, 0)
